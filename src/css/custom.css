@@ -1,0 +1,55 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #d4a017;
+  --ifm-color-primary-dark: #bf9015;
+  --ifm-color-primary-darker: #b38814;
+  --ifm-color-primary-darkest: #947010;
+  --ifm-color-primary-light: #e0af1a;
+  --ifm-color-primary-lighter: #e5b51d;
+  --ifm-color-primary-lightest: #f0c729;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #e0af1a;
+  --ifm-color-primary-dark: #d4a017;
+  --ifm-color-primary-darker: #bf9015;
+  --ifm-color-primary-darkest: #947010;
+  --ifm-color-primary-light: #e5b51d;
+  --ifm-color-primary-lighter: #f0c729;
+  --ifm-color-primary-lightest: #fae89f;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Background image for hero banner */
+.hero--primary {
+  background-image: url('/img/keradb_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+.hero--primary .hero__title,
+.hero--primary .hero__subtitle {
+  color: #333;
+}
+
+.hero--primary .button--secondary {
+  background-color: #333;
+  color: #d4a017;
+  border-color: #333;
+}
+
+.hero--primary .button--secondary:hover {
+  background-color: #555;
+  border-color: #555;
+}
