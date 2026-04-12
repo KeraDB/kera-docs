@@ -2,11 +2,52 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://keradb.github.io/blog</id>
     <title>KeraDB Blog</title>
-    <updated>2026-01-19T00:00:00.000Z</updated>
+    <updated>2026-04-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://keradb.github.io/blog"/>
     <subtitle>KeraDB Blog</subtitle>
     <icon>https://keradb.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[KeraDB Is Now Available on npm — Official Node.js / TypeScript SDK]]></title>
+        <id>https://keradb.github.io/blog/keradb-node-sdk-release</id>
+        <link href="https://keradb.github.io/blog/keradb-node-sdk-release"/>
+        <updated>2026-04-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We're excited to announce that KeraDB now has an official Node.js / TypeScript SDK, available on npm.]]></summary>
+        <content type="html"><![CDATA[<p>We're excited to announce that <strong>KeraDB now has an official Node.js / TypeScript SDK</strong>, available on npm.</p>
+<p>You can install it with a single command:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">npm</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> @keradb/node-sdk</span><br></span></code></pre></div></div>
+<p>This release brings KeraDB's fast embedded document storage and vector search to the JavaScript ecosystem, making it easy to use in Node.js applications, TypeScript projects, serverless functions, and local-first tools.</p>
+<p>With the npm release, KeraDB can be used directly inside Node.js and TypeScript projects for:</p>
+<ul>
+<li class="">Embedded document storage</li>
+<li class="">Fast single-record CRUD operations</li>
+<li class="">Local-first and offline workflows</li>
+<li class="">AI/agent pipelines that need lightweight persistence</li>
+<li class="">Prototyping without database setup or servers</li>
+</ul>
+<p>KeraDB runs as an embedded database — no server to spin up, no configuration required.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quick-example">Quick Example<a href="https://keradb.github.io/blog/keradb-node-sdk-release#quick-example" class="hash-link" aria-label="Direct link to Quick Example" title="Direct link to Quick Example" translate="no">​</a></h2>
+<div class="language-typescript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-typescript codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"> KeraDB </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"@keradb/node-sdk"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> db </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">KeraDB</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"example.kdb"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">await</span><span class="token plain"> db</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">insert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"users"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  id</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"user_1"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  name</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Alice"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  role</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"developer"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> user </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">await</span><span class="token plain"> db</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">get</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"users"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"user_1"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token builtin">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">user</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>The SDK is built with TypeScript-first design, so you get full type safety and autocompletion out of the box.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="get-started">Get Started<a href="https://keradb.github.io/blog/keradb-node-sdk-release#get-started" class="hash-link" aria-label="Direct link to Get Started" title="Direct link to Get Started" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>npm</strong>: <a href="https://www.npmjs.com/package/@keradb/node-sdk" target="_blank" rel="noopener noreferrer" class="">https://www.npmjs.com/package/@keradb/node-sdk</a></li>
+<li class=""><strong>Documentation</strong>: <a href="https://keradb.github.io/docs" target="_blank" rel="noopener noreferrer" class="">https://keradb.github.io/docs</a></li>
+<li class=""><strong>GitHub</strong>: <a href="https://github.com/KeraDB/keradb" target="_blank" rel="noopener noreferrer" class="">https://github.com/KeraDB/keradb</a></li>
+</ul>
+<p>If you're building something with KeraDB in Node.js or TypeScript, we'd love to hear about it.</p>]]></content>
+        <author>
+            <name>KeraDB Team</name>
+            <uri>https://github.com/keradb</uri>
+        </author>
+        <category label="nodejs" term="nodejs"/>
+        <category label="typescript" term="typescript"/>
+        <category label="npm" term="npm"/>
+        <category label="release" term="release"/>
+        <category label="nosql" term="nosql"/>
+        <category label="vector-search" term="vector-search"/>
+        <category label="embedded-db" term="embedded-db"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[KeraDB vs DuckDB Benchmark (v0.1.0) — OLTP Meets OLAP (Quack Quack)]]></title>
         <id>https://keradb.github.io/blog/keradb-vs-duckdb-benchmark-v0-1-0</id>
